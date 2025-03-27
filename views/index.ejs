@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crytocurreny Checker</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Crytocurrency Checker</h1>
+            <img src="images/Bitcoin.svg.webp" alt="">
+            <form action="/check" method="POST">
+                <input type="text" name="crypto" placeholder="Enter a cryptocurrency" required>
+                <button type="submit">Check</button>
+            </form>
+        </div>
+        <div class="result">
+            <% if (locals.name) { %>
+                <h3><%= name%></h3>
+                <p><%= price %> USD</p>
+            <% } else{%>
+                <p>Enter a cryptocurrency to check</p>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
